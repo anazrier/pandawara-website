@@ -60,7 +60,7 @@ Website ini berfokus pada *clean design*, pesan yang kuat, serta kemudahan bagi 
 ##  Struktur Repositori
 
 ```text
-├── assets/                  # Folder untuk gambar kegiatan, logo, dan ikon
+├── img/                     # Folder untuk gambar kegiatan, logo, dan ikon
 ├── css/
 │   └── style.css            # File gaya utama (termasuk variabel warna & dark mode)
 ├── js/
