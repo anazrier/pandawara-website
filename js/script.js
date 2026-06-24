@@ -4,12 +4,23 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
   const bodyElement = document.body;
 
+  const currentTheme = localStorage.getItem('theme');
+
+  if (currentTheme === 'dark') {
+    bodyElement.classList.add('dark-mode');
+    if (toggleSwitch) {
+      toggleSwitch.checked = true; 
+    }
+  }
+
   if (toggleSwitch) {
     toggleSwitch.addEventListener('change', function(e) {
       if (e.target.checked) {
         bodyElement.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark'); 
       } else {
         bodyElement.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light'); 
       }
     });
   }
